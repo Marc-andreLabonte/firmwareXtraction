@@ -1,0 +1,30 @@
+../flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=2M
+flashrom p1.0-136-g7fb508d on Linux 4.9.0-8-amd64 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
+
+Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
+Found GigaDevice flash chip "GD25B128B/GD25Q128B" (16384 kB, SPI) on buspirate_spi.
+Found GigaDevice flash chip "GD25Q128C" (16384 kB, SPI) on buspirate_spi.
+Multiple flash chip definitions match the detected chip(s): "GD25B128B/GD25Q128B", "GD25Q128C"
+Please specify which chip definition to use with the -c <chipname> option.
+$ ../flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=2M -c "GD25Q128C" -r ac1200-kit6a.bin
+flashrom p1.0-136-g7fb508d on Linux 4.9.0-8-amd64 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
+
+Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
+Found GigaDevice flash chip "GD25Q128C" (16384 kB, SPI) on buspirate_spi.
+Reading flash... done.
+time ../flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=2M -c "GD25Q128C" -r ac1200-kit6b.bin
+flashrom p1.0-136-g7fb508d on Linux 4.9.0-8-amd64 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
+
+Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
+Found GigaDevice flash chip "GD25Q128C" (16384 kB, SPI) on buspirate_spi.
+Reading flash... done.
+
+real    5m28.157s
+user    0m2.548s
+sys 0m1.724s
+$ sha1sum ac1200-kit6*
+c1f4e457874469f74c2d38318dcc18e929667a6f  ac1200-kit6a.bin
+c1f4e457874469f74c2d38318dcc18e929667a6f  ac1200-kit6b.bin

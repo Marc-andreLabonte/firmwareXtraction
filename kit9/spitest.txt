@@ -1,0 +1,16 @@
+time ../flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=2M -c "GD25Q128C" -r ac1200-kit9x.bin
+flashrom p1.0-136-g7fb508d on Linux 4.9.0-8-amd64 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
+
+Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
+Found GigaDevice flash chip "GD25Q128C" (16384 kB, SPI) on buspirate_spi.
+Reading flash... done.
+
+real    5m28.989s
+user    0m2.564s
+sys 0m2.024s
+$ shasum ac1200-kit9*
+406f77f0755c3beaa5bdcff1ecf72bded3e05fda  ac1200-kit9a.bin
+406f77f0755c3beaa5bdcff1ecf72bded3e05fda  ac1200-kit9b.bin
+406f77f0755c3beaa5bdcff1ecf72bded3e05fda  ac1200-kit9c.bin
+406f77f0755c3beaa5bdcff1ecf72bded3e05fda  ac1200-kit9x.bin

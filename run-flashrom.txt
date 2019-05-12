@@ -1,0 +1,1 @@
+./flashrom -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=2M

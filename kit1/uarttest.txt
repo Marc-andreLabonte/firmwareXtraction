@@ -1,0 +1,380 @@
+Script started on Tue 23 Apr 2019 10:44:26 AM EDT
+screen /dev/ttyUSB0 115200
+HiZ>m
+1. HiZ
+2. 1-WIRE
+3. UART
+4. I2C
+5. SPI
+6. 2WIRE
+7. 3WIRE
+8. LCD
+9. DIO
+x. exit(without change)
+
+(1)>[?5h[?5l[?5h[?5l
+Ready
+HiZ>?
+General [8C[8C[8C[8CProtocol interaction
+---------------------------------------------------------------------------
+?[7CThis help[7C[8C[8C(0)[5CList current macros
+=X/|X   Converts X/reverse X[4C[8C(x)[5CMacro x
+~[7CSelftest[8C[8C[8C[[7CStart
+#[7CReset   [8C[8C[8C][7CStop
+$[7CJump to bootloader[6C[8C{[7CStart with read
+&/%[5CDelay 1 us/ms   [8C[8C}[7CStop
+a/A/@   AUXPIN (low/HI/READ)[4C[8C"abc"   Send string
+b[7CSet baudrate[4C[8C[8C123
+c/C[5CAUX assignment (aux/CS) [8C0x123
+d/D[5CMeasure ADC (once/CONT.)[8C0b110   Send value
+f[7CMeasure frequency[7C[8Cr[7CRead
+g/S[5CGenerate PWM/Servo[6C[8C/[7CCLK hi
+h[7CCommandhistory  [8C[8C\[7CCLK lo
+i[7CVersioninfo/statusinfo  [8C^[7CCLK tick
+l/L[5CBitorder (msb/LSB)[6C[8C-[7CDAT hi
+m[7CChange mode[5C[8C[8C_[7CDAT lo
+o[7CSet output type [8C[8C.[7CDAT read
+p/P[5CPullup resistors (off/ON)[7C![7CBit read
+s[7CScript engine   [8C[8C:[7CRepeat e.g. r:10
+v[7CShow volts/states[7C[8C.[7CBits to read/write e.g. 0x55.2
+w/W[5CPSU (off/ON)[4C[8C<x>/<x= >/<0>   Usermacro x/assign x/list all
+HiZ>m
+1. HiZ
+2. 1-WIRE
+3. UART
+4. I2C
+5. SPI
+6. 2WIRE
+7. 3WIRE
+8. LCD
+9. DIO
+x. exit(without change)
+
+(1)>3
+Set serial port speed: (bps)
+ 1. 300
+ 2. 1200
+ 3. 2400
+ 4. 4800
+ 5. 9600
+ 6. 19200
+ 7. 38400
+ 8. 57600
+ 9. 115200
+10. BRG raw value
+
+(1)>9
+Data bits and parity:
+ 1. 8, NONE *default 
+ 2. 8, EVEN 
+ 3. 8, ODD 
+ 4. 9, NONE
+(1)>1
+Stop bits:
+ 1. 1 *default
+ 2. 2
+(1)>1
+Receive polarity:
+ 1. Idle 1 *default
+ 2. Idle 0
+(1)>2[?5h[?5l[?5h[?5l[?5h[?5l1
+
+Invalid choice, try again
+
+(1)>1
+Select output type:
+ 1. Open drain (H=Hi-Z, L=GND)
+ 2. Normal (H=3.3V, L=GND)
+
+(1)>2
+Ready
+UART>?
+General [8C[8C[8C[8CProtocol interaction
+---------------------------------------------------------------------------
+?[7CThis help[7C[8C[8C(0)[5CList current macros
+=X/|X   Converts X/reverse X[4C[8C(x)[5CMacro x
+~[7CSelftest[8C[8C[8C[[7CStart
+#[7CReset   [8C[8C[8C][7CStop
+$[7CJump to bootloader[6C[8C{[7CStart with read
+&/%[5CDelay 1 us/ms   [8C[8C}[7CStop
+a/A/@   AUXPIN (low/HI/READ)[4C[8C"abc"   Send string
+b[7CSet baudrate[4C[8C[8C123
+c/C[5CAUX assignment (aux/CS) [8C0x123
+d/D[5CMeasure ADC (once/CONT.)[8C0b110   Send value
+f[7CMeasure frequency[7C[8Cr[7CRead
+g/S[5CGenerate PWM/Servo[6C[8C/[7CCLK hi
+h[7CCommandhistory  [8C[8C\[7CCLK lo
+i[7CVersioninfo/statusinfo  [8C^[7CCLK tick
+l/L[5CBitorder (msb/LSB)[6C[8C-[7CDAT hi
+m[7CChange mode[5C[8C[8C_[7CDAT lo
+o[7CSet output type [8C[8C.[7CDAT read
+p/P[5CPullup resistors (off/ON)[7C![7CBit read
+s[7CScript engine   [8C[8C:[7CRepeat e.g. r:10
+v[7CShow volts/states[7C[8C.[7CBits to read/write e.g. 0x55.2
+w/W[5CPSU (off/ON)[4C[8C<x>/<x= >/<0>   Usermacro x/assign x/list all
+UART>()[?5h[?5l)
+ 0.Macro menu
+ 1.Transparent bridge
+ 2. Live monitor
+ 3.Bridge with flow control
+Syntax error at char 2
+UART>(0)
+ 0.Macro menu
+ 1.Transparent bridge
+ 2. Live monitor
+ 3.Bridge with flow control
+UART>(1)
+UART bridge
+Reset to exit
+Are you sure? y
+Decompressing...done
+
+
+CFE version 9.10.178.50 (r635252) based on BBP 1.0.37 for BCM947XX (32bit,SP,)
+Build Date: Sat Jan  7 14:28:27 CST 2017 (seal@seal-pc)
+Copyright (C) 2000-2008 Broadcom Corporation.
+
+Init Arena
+Init Devs.
+Boot partition size = 262144(0x40000)
+DDR Clock: 533 MHz
+Info: DDR frequency set from clkfreq=900,*533*
+No GPIO defined for BBSI interface 
+No BBSI device
+bcm_robo_enable_switch: EEE is disabled
+et0: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 9.10.178.50 (r635252)
+CPU type 0x0: 900MHz
+Tot mem: 131072 KBytes
+
+CFE mem:    0x00F00000 - 0x02FB912C (34312492)
+Data:       0x00F6B750 - 0x00F70C00 (21680)
+BSS:        0x00F70C10 - 0x00FB712C (288028)
+Heap:       0x00FB712C - 0x02FB712C (33554432)
+Stack:      0x02FB712C - 0x02FB912C (8192)
+Text:       0x00F00000 - 0x00F5F4F4 (390388)
+
+Device eth0:  hwaddr 00-90-4C-1E-20-01, ipaddr 192.168.1.1, mask 255.255.255.0
+        gateway not set, nameserver not set
+Reading Partition Table from NVRAM ... OK
+Parsing Partition Table ... OK
+factory boot check integer ok.
+factory boot load fs fs boot len 262144 to addr 0x3f00000.
+Decompressing...done
+
+
+CFE version 9.10.178.50 (r635252) based on BBP 1.0.37 for BCM947XX (32bit,SP,)
+Build Date: Sat Jan  7 14:28:50 CST 2017 (seal@seal-pc)
+Copyright (C) 2000-2008 Broadcom Corporation.
+
+Init Arena
+Init Devs.
+Boot partition size = 262144(0x40000)
+DDR Clock: 533 MHz
+Info: DDR frequency set from clkfreq=900,*533*
+No GPIO defined for BBSI interface 
+No BBSI device
+bcm_robo_enable_switch: EEE is disabled
+et0: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 9.10.178.50 (r635252)
+CPU type 0x0: 900MHz
+Tot mem: 131072 KBytes
+
+CFE mem:    0x00F00000 - 0x02FB1AC4 (34282180)
+Data:       0x00F69338 - 0x00F69AD4 (1948)
+BSS:        0x00F69AE0 - 0x00FAFAC4 (286692)
+Heap:       0x00FAFAC4 - 0x02FAFAC4 (33554432)
+Stack:      0x02FAFAC4 - 0x02FB1AC4 (8192)
+Text:       0x00F00000 - 0x00F5D4EC (382188)
+
+Device eth0:  hwaddr 00-90-4C-1E-20-01, ipaddr 192.168.1.1, mask 255.255.255.0
+        gateway not set, nameserver not set
+Loader:raw Filesys:raw Dev:flash0.os File: Options:(null)
+Loading: .... 4674528 bytes read
+Entry at 0x00008000
+Closing network.
+Starting program at 0x00008000
+console [ttyS0] enabled, bootconsole disabled
+brd: module loaded
+loop: module loaded
+pflash: found no supported devices
+bcmsflash: squash filesystem found at block 40
+Creating 6 MTD partitions on "bcmsflash":
+0x000000000000-0x000000080000 : "boot"
+0x000000080000-0x000000ff0000 : "linux"
+0x000000280000-0x000000ff0000 : "rootfs"
+0x000000fb0000-0x000000fc0000 : "usb-config"
+0x000000fc0000-0x000000fe0000 : "log"
+0x000000ff0000-0x000001000000 : "nvram"
+flash_chrdev :  flash_chrdev_init 
+nflash: found no supported devices
+PPP generic driver version 2.4.2
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+Registered led device: blue:lan1
+Registered led device: blue:lan2
+Registered led device: blue:lan3
+Registered led device: blue:lan4
+Registered led device: blue:usb_1
+Registered led device: blue:wps
+Registered led device: blue:wan
+Registered led device: orange:wan
+Registered led device: blue:status
+Registered led device: blue:wlan_2g
+Registered led device: blue:wlan_5g
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (1954 buckets, 7816 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+NET: Registered protocol family 10
+lo: Disabled Privacy Extensions
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+IPv6 over IPv4 tunneling driver
+sit0: Disabled Privacy Extensions
+NET: Registered protocol family 17
+Bridge firewalling registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Northstar brcmnand NAND Flash Controller driver, Version 0.1 (c) Broadcom Inc. 2012
+brcmnand: found no supported devices
+VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+devtmpfs: mounted
+Freeing init memory: 208K
+ctf: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+ctf 22127 0 - Live 0x7f000000 (P)
+et_module_init: passivemode set to 0x0
+et_module_init: txworkq set to 0x0
+et_module_init: et_txq_thresh set to 0xce4
+et_module_init: et_rxlazy_timeout set to 0x3e8
+et_module_init: et_rxlazy_framecnt set to 0x20
+bcm_robo_enable_switch: EEE is disabled
+eth0: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 9.10.178.50 (r635252)
+eth1: Broadcom BCM47XX 10/100/1000 Mbps Ethernet Controller 9.10.178.50 (r635252)
+et 71774 0 - Live 0x7f00e000 (P)
+et 71774 0 - Live 0x7f00e000 (P)
+emf 17251 0 - Live 0x7f02a000 (P)
+igs 13399 0 - Live 0x7f037000 (P)
+dpsta 4559 0 - Live 0x7f043000 (P)
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci_hcd 0000:00:04.1: EHCI Host Controller
+ehci_hcd 0000:00:04.1: new USB bus registered, assigned bus number 1
+ehci_hcd 0000:00:04.1: irq 36, io mem 0x18004000
+ehci_hcd 0000:00:04.1: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+hotplug detected product:  1d6b/2/206
+hotplug detected product:  1d6b/2/206
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci_hcd 0000:00:04.0: OHCI Host Controller
+ohci_hcd 0000:00:04.0: new USB bus registered, assigned bus number 2
+ohci_hcd 0000:00:04.0: irq 36, io mem 0x1800d000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 2 ports detected
+hotplug detected product:  1d6b/1/206
+hotplug detected product:  1d6b/1/206
+NTFS driver 2.1.29 [Flags: R/O MODULE].
+fuse init (API version 7.15)
+jffs2 not ready yet; using ramdisk
+
+Please press Enter to activate this console. button cycle succeed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+PPP MPPE Compression module registered
+ip6tnl0: Disabled Privacy Extensions
+L2TP core driver, V2.0
+L2TP netlink interface
+gre: GRE over IPv4 demultiplexor driver
+GRE over IPv4 tunneling driver
+bonding: Ethernet Channel Bonding Driver: v3.7.0 (June 2, 2010)
+bonding: Warning: either miimon or arp_interval and arp_ip_target module parameters must be specified, otherwise bonding will not detect link failures! see bonding.txt for details.
+NET: Registered protocol family 24
+PPPoL2TP kernel driver, V2.0
+PPTP driver version 0.8.3
+nf_conntrack_rtsp v0.7 loading
+nf_nat_rtsp v0.7 loading
+reloadconfig() begin:
+reloadconfig() end:
+reload_profile() begin:
+reload_profile() end:
+GMT+08:00[7C
+*#
+device eth0.1 entered promiscuous mode
+device eth0 entered promiscuous mode
+br-lan: port 1(eth0.1) entering learning state
+br-lan: port 1(eth0.1) entering learning state
+ADDRCONF(NETDEV_CHANGE): eth0.1: link becomes ready
+WAN(eth1.4094) carrier off!
+br-lan: port 1(eth0.1) entering forwarding state
+Lan Domain: tplinklogin.net
+Lan Domain: www.tplinklogin.net
+eth1: no IPv6 routers present
+eth0: no IPv6 routers present
+eth1.4094: no IPv6 routers present
+br-lan: no IPv6 routers present
+
+
+
+BusyBox v1.19.4 (2018-01-22 11:26:48 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+     MM           NM                    MMMMMMM          M       M
+   $MMMMM        MMMMM                MMMMMMMMMMM      MMM     MMM
+  MMMMMMMM     MM MMMMM.              MMMMM:MMMMMM:   MMMM   MMMMM
+MMMM= MMMMMM  MMM   MMMM       MMMMM   MMMM  MMMMMM   MMMM  MMMMM'
+MMMM=  MMMMM MMMM    MM       MMMMM    MMMM    MMMM   MMMMNMMMMM
+MMMM=   MMMM  MMMMM          MMMMM     MMMM    MMMM   MMMMMMMM
+MMMM=   MMMM   MMMMMM       MMMMM      MMMM    MMMM   MMMMMMMMM
+MMMM=   MMMM     MMMMM,    NMMMMMMMM   MMMM    MMMM   MMMMMMMMMMM
+MMMM=   MMMM      MMMMMM   MMMMMMMM    MMMM    MMMM   MMMM  MMMMMM
+MMMM=   MMMM   MM    MMMM    MMMM      MMMM    MMMM   MMMM    MMMM
+MMMM$ ,MMMMM  MMMMM  MMMM    MMM       MMMM   MMMMM   MMMM    MMMM
+  MMMMMMM:      MMMMMMM     M         MMMMMMMMMMMM  MMMMMMM MMMMMMM
+    MMMMMM       MMMMN     M           MMMMMMMMM      MMMM    MMMM
+     MMMM          M                    MMMMMMM        M       M
+       M
+ ---------------------------------------------------------------
+   For those about to rock... (Attitude Adjustment, r12067)
+ ---------------------------------------------------------------
+root@Akronite:/# wl_module_init: passivemode set to 0x0
+wl_module_init: txworkq set to 0x0
+eth2: Broadcom BCM43c8 802.11 Wireless Controller 9.10.178.50 (r635252 WLTEST)
+PCI: Enabling device 0001:01:00.0 (0140 -> 0142)
+eth3: Broadcom BCM43227 802.11 Wireless Controller 9.10.178.50 (r635252 WLTEST)
+device eth3 entered promiscuous mode
+br-lan: port 2(eth3) entering learning state
+br-lan: port 2(eth3) entering learning state
+kcg 333 :GPL NetUSB up!
+device eth2 entered promiscuous mode
+kc  227 : init_DebugD end
+INFO182B: NetUSB 1.02.80, 00020624 : Feb 24 2016 11:18:15
+kc   90 : run_telnetDBGDServer start 
+INFO182D: 7437: Archer C1200 :Archer C1200 
+INFO182E:  AUTH ISOC
+INFO182F:  filterAudio
+usbcore: registered new interface driver KC NetUSB General Driver
+INFO01ED:  init proc : PAGE_SIZE 4096
+INFO171F:  infomap 7f97f428 
+INFO1722:  sleep to wait br-lan to wake up
+INFO15D9: tcpConnector() started... : br-lan 
+br-lan: port 3(eth2) entering learning state
+br-lan: port 3(eth2) entering learning state
+br-lan: port 2(eth3) entering forwarding state
+br-lan: port 3(eth2) entering forwarding state
+usbshare boot start
+usbshare boot end
+INFO1589: Bind to br-lan
+=====>>>>> wireless setting is finished
+
+root@Akronite:/# id
+uid=0(root) gid=0(root)
+root@Akronite:/# [?1l>[53;1H
+[?1049l[detached from 11393.pts-3.desktop-vurj9jc]
+]0;cum017@desktop-vurj9jc: ~/workctf/nsec2019-workshop-bigfiles/kit1[01;32mcum017@desktop-vurj9jc[00m:[01;34m~/workctf/nsec2019-workshop-bigfiles/kit1[00m$ pkill screen
+]0;cum017@desktop-vurj9jc: ~/workctf/nsec2019-workshop-bigfiles/kit1[01;32mcum017@desktop-vurj9jc[00m:[01;34m~/workctf/nsec2019-workshop-bigfiles/kit1[00m$ exit
+
+Script done on Tue 23 Apr 2019 10:47:20 AM EDT
